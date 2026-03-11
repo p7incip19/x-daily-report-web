@@ -12,6 +12,9 @@
     h1 { font-size: 14px; font-weight: 600; color: #fff; }
     .date { color: #6b7280; font-size: 11px; }
     h2 { font-size: 10px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin: 14px 0 8px; }
+    .stats { display: flex; gap: 16px; margin-bottom: 8px; }
+    .stat { font-size: 11px; color: #6b7280; }
+    .stat-num { color: #60a5fa; font-weight: 600; }
     .cards { display: flex; flex-wrap: wrap; gap: 6px; }
     .card { background: #16161e; border: 1px solid #23232e; border-radius: 4px; padding: 6px 10px; min-width: 120px; }
     .card-name { font-weight: 500; color: #60a5fa; font-size: 11px; }
@@ -39,6 +42,10 @@
     </header>
 
     <h2>新关注</h2>
+    <div class="stats">
+      <span class="stat">今日新增: <span class="stat-num">7</span></span>
+      <span class="stat">总关注: <span class="stat-num">16</span></span>
+    </div>
     <div class="cards">
       <a href="https://x.com/dr_cintas" class="card" target="_blank"><div class="card-name">@dr_cintas</div><div class="card-desc">AI Agent</div></a>
       <a href="https://x.com/trailofbits" class="card" target="_blank"><div class="card-name">@trailofbits</div><div class="card-desc">安全公司</div></a>
