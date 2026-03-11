@@ -11,7 +11,11 @@
     header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px solid #23232e; margin-bottom: 12px; }
     h1 { font-size: 14px; font-weight: 600; color: #fff; }
     .date { color: #6b7280; font-size: 11px; }
-    h2 { font-size: 10px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin: 14px 0 6px; }
+    h2 { font-size: 10px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin: 14px 0 8px; }
+    .cards { display: flex; flex-wrap: wrap; gap: 6px; }
+    .card { background: #16161e; border: 1px solid #23232e; border-radius: 4px; padding: 6px 10px; min-width: 120px; }
+    .card-name { font-weight: 500; color: #60a5fa; font-size: 11px; }
+    .card-desc { color: #6b7280; font-size: 10px; }
     table { width: 100%; border-collapse: collapse; }
     th { text-align: left; font-size: 9px; color: #4b5563; padding: 4px 8px; border-bottom: 1px solid #23232e; }
     td { padding: 5px 8px; border-bottom: 1px solid #1a1a22; font-size: 11px; }
@@ -22,7 +26,6 @@
     .tag-security { background: rgba(239, 68, 68, 0.2); color: #f87171; }
     a { color: inherit; text-decoration: none; }
     a:hover { color: #60a5fa; }
-    .name { font-weight: 500; color: #e5e7eb; }
     .title { color: #e5e7eb; }
     .meta { color: #6b7280; font-size: 10px; }
     footer { margin-top: 16px; padding-top: 8px; border-top: 1px solid #23232e; color: #4b5563; font-size: 9px; text-align: center; }
@@ -36,16 +39,15 @@
     </header>
 
     <h2>新关注</h2>
-    <table>
-      <tr><th>博主</th><th>简介</th></tr>
-      <tr><td><a href="https://x.com/dr_cintas" class="name" target="_blank">@dr_cintas</a></td><td class="meta">AI Agent</td></tr>
-      <tr><td><a href="https://x.com/trailofbits" class="name" target="_blank">@trailofbits</a></td><td class="meta">安全公司</td></tr>
-      <tr><td><a href="https://x.com/dguido" class="name" target="_blank">@dguido</a></td><td class="meta">ToB CEO</td></tr>
-      <tr><td><a href="https://x.com/Chain_GPT" class="name" target="_blank">@Chain_GPT</a></td><td class="meta">AI 审计</td></tr>
-      <tr><td><a href="https://x.com/coinbureau" class="name" target="_blank">@coinbureau</a></td><td class="meta">加密新闻</td></tr>
-      <tr><td><a href="https://x.com/akshay_pachaar" class="name" target="_blank">@akshay_pachaar</a></td><td class="meta">ART 作者</td></tr>
-      <tr><td><a href="https://x.com/Aurimas_Gr" class="name" target="_blank">@Aurimas_Gr</a></td><td class="meta">AI Engineering</td></tr>
-    </table>
+    <div class="cards">
+      <a href="https://x.com/dr_cintas" class="card" target="_blank"><div class="card-name">@dr_cintas</div><div class="card-desc">AI Agent</div></a>
+      <a href="https://x.com/trailofbits" class="card" target="_blank"><div class="card-name">@trailofbits</div><div class="card-desc">安全公司</div></a>
+      <a href="https://x.com/dguido" class="card" target="_blank"><div class="card-name">@dguido</div><div class="card-desc">ToB CEO</div></a>
+      <a href="https://x.com/Chain_GPT" class="card" target="_blank"><div class="card-name">@Chain_GPT</div><div class="card-desc">AI 审计</div></a>
+      <a href="https://x.com/coinbureau" class="card" target="_blank"><div class="card-name">@coinbureau</div><div class="card-desc">加密新闻</div></a>
+      <a href="https://x.com/akshay_pachaar" class="card" target="_blank"><div class="card-name">@akshay_pachaar</div><div class="card-desc">ART 作者</div></a>
+      <a href="https://x.com/Aurimas_Gr" class="card" target="_blank"><div class="card-name">@Aurimas_Gr</div><div class="card-desc">AI Engineering</div></a>
+    </div>
 
     <h2>热门</h2>
     <table>
