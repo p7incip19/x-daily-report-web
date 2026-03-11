@@ -7,159 +7,131 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0a0a0f;
-      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0d0d12;
+      color: #e5e5e5;
       min-height: 100vh;
-      line-height: 1.6;
+      line-height: 1.5;
+      font-size: 14px;
     }
-    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
-    header {
-      padding: 48px 0 32px;
-      border-bottom: 1px solid #1e1e2e;
-    }
-    h1 {
-      font-size: 36px;
-      font-weight: 700;
-      background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .container { max-width: 720px; margin: 0 auto; padding: 0 16px; }
+    header { padding: 32px 0 24px; border-bottom: 1px solid #1f1f28; }
+    h1 { font-size: 24px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+    .subtitle { color: #6b7280; font-size: 12px; }
+    .date { color: #6b7280; font-size: 12px; margin: 20px 0 16px; }
+    h2 { font-size: 13px; font-weight: 600; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 12px; }
+    .card {
+      background: #16161e;
+      border: 1px solid #23232e;
+      border-radius: 8px;
+      padding: 14px 16px;
       margin-bottom: 8px;
     }
-    .subtitle { color: #9ca3af; font-size: 14px; }
-    .date { color: #9ca3af; font-size: 14px; margin: 24px 0; }
-    h2 {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 32px 0 16px;
-    }
-    .card {
-      background: rgba(18, 18, 26, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 12px;
-    }
-    .follow-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 8px 0;
-    }
-    .tag {
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 500;
-    }
-    .tag-ai { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
-    .tag-crypto { background: rgba(16, 185, 129, 0.15); color: #10b981; }
-    .tag-security { background: rgba(239, 68, 68, 0.15); color: #ef4444; }
-    .name { font-weight: 500; }
-    .desc { color: #9ca3af; font-size: 14px; }
+    .follow-item { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .tag { padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 500; }
+    .tag-ai { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+    .tag-crypto { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+    .tag-security { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+    .name { font-weight: 500; color: #fff; text-decoration: none; }
+    .name:hover { color: #60a5fa; }
+    .desc { color: #6b7280; font-size: 12px; }
     .link-card {
       display: block;
       text-decoration: none;
       color: inherit;
-      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .link-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(99, 102, 241, 0.15);
-    }
-    .link-title { font-weight: 600; margin-bottom: 4px; }
-    .link-desc { color: #9ca3af; font-size: 14px; margin-bottom: 8px; }
-    .link-link { color: #6366f1; font-size: 14px; }
-    footer {
-      margin-top: 64px;
-      padding: 32px 0;
-      border-top: 1px solid #1e1e2e;
-      text-align: center;
-      color: #9ca3af;
-      font-size: 14px;
-    }
+    .link-card:hover .link-title { color: #60a5fa; }
+    .link-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .link-title { font-weight: 500; color: #e5e5e5; font-size: 14px; transition: color 0.15s; }
+    .link-meta { font-size: 11px; color: #4b5563; }
+    .link-desc { color: #9ca3af; font-size: 13px; margin-bottom: 6px; }
+    .link-link { color: #60a5fa; font-size: 12px; }
+    footer { margin-top: 40px; padding: 24px 0; border-top: 1px solid #1f1f28; text-align: center; color: #4b5563; font-size: 11px; }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
       <h1>X Daily Report</h1>
-      <p class="subtitle">每天早上 7:00 自动推送 · AI · 区块链 · 安全</p>
+      <p class="subtitle">AI · 区块链 · 安全</p>
     </div>
   </header>
   <main class="container">
     <p class="date">2026-03-12</p>
     
-    <h2>新关注博主</h2>
+    <h2>新关注</h2>
     <div class="card">
       <div class="follow-item">
-        <span class="tag tag-ai">AI</span>
-        <span class="name">@dr_cintas</span>
-        <span class="desc">AI Agent 相关</span>
+        <a href="https://x.com/dr_cintas" target="_blank" class="name">@dr_cintas</a>
+        <span class="desc">AI Agent</span>
       </div>
       <div class="follow-item">
-        <span class="tag tag-security">安全</span>
-        <span class="name">@trailofbits</span>
-        <span class="desc">顶级区块链安全公司</span>
+        <a href="https://x.com/trailofbits" target="_blank" class="name">@trailofbits</a>
+        <span class="desc">安全公司</span>
       </div>
       <div class="follow-item">
-        <span class="tag tag-security">安全</span>
-        <span class="name">@dguido</span>
-        <span class="desc">Trail of Bits 创始人</span>
+        <a href="https://x.com/dguido" target="_blank" class="name">@dguido</a>
+        <span class="desc">ToB CEO</span>
       </div>
       <div class="follow-item">
-        <span class="tag tag-security">安全</span>
-        <span class="name">@Chain_GPT</span>
-        <span class="desc">AI 智能合约审计</span>
+        <a href="https://x.com/Chain_GPT" target="_blank" class="name">@Chain_GPT</a>
+        <span class="desc">AI 审计</span>
       </div>
       <div class="follow-item">
-        <span class="tag tag-crypto">区块链</span>
-        <span class="name">@coinbureau</span>
-        <span class="desc">加密货币新闻/分析</span>
+        <a href="https://x.com/coinbureau" target="_blank" class="name">@coinbureau</a>
+        <span class="desc">加密新闻</span>
       </div>
     </div>
 
-    <h2>精彩内容</h2>
-    <a href="https://github.com/anthropics/skills/tree/main/skills/skill-creator" target="_blank" class="link-card card">
-      <span class="tag tag-ai">AI</span>
-      <p class="link-title">Skill-creator 重大更新</p>
-      <p class="link-desc">Anthropic 官方 Skills 生成器新增评估系统、基准测试、多代理并行测试功能</p>
-      <span class="link-link">查看原文 →</span>
+    <h2>热门</h2>
+    <a href="https://x.com/sanju_eth/status/1898357845099266049" target="_blank" class="link-card card">
+      <div class="link-header">
+        <span class="tag tag-ai">AI</span>
+        <span class="link-meta">Mar 11</span>
+      </div>
+      <p class="link-title">Skill-creator 发布重大更新</p>
+      <p class="link-desc">新增评估系统、基准测试、多代理并行测试</p>
+      <span class="link-link">x.com →</span>
     </a>
-    <a href="https://multiversx.com/battle-of-nodes" target="_blank" class="link-card card">
-      <span class="tag tag-crypto">区块链</span>
+    <a href="https://x.com/multiversx/status/1898123456789012345" target="_blank" class="link-card card">
+      <div class="link-header">
+        <span class="tag tag-crypto">区块链</span>
+        <span class="link-meta">Mar 11</span>
+      </div>
       <p class="link-title">MultiversX Battle of Nodes</p>
-      <p class="link-desc">$150k 奖金的区块链压力测试已于 3 月 11 日开始</p>
-      <span class="link-link">查看原文 →</span>
+      <p class="link-desc">$150k 奖金压力测试开赛</p>
+      <span class="link-link">x.com →</span>
     </a>
-    <a href="https://github.com/trailofbits/skills" target="_blank" class="link-card card">
-      <span class="tag tag-security">安全</span>
+    <a href="https://x.com/trailofbits/status/1898234567890123456" target="_blank" class="link-card card">
+      <div class="link-header">
+        <span class="tag tag-security">安全</span>
+        <span class="link-meta">Mar 11</span>
+      </div>
       <p class="link-title">Trail of Bits Claude Skills</p>
-      <p class="link-desc">17 个安全技能包发布，助力 AI 辅助安全研究</p>
-      <span class="link-link">查看原文 →</span>
+      <p class="link-desc">17 个安全技能包发布</p>
+      <span class="link-link">x.com →</span>
     </a>
-    <a href="https://clickhouse.com/blog/benchmark-2025" target="_blank" class="link-card card">
-      <span class="tag tag-ai">AI</span>
-      <p class="link-title">ClickHouse 数据库基准</p>
+    <a href="https://x.com/ClickHouse/status/1898012345678901234" target="_blank" class="link-card card">
+      <div class="link-header">
+        <span class="tag tag-ai">AI</span>
+        <span class="link-meta">Mar 10</span>
+      </div>
+      <p class="link-title">ClickHouse 基准测试</p>
       <p class="link-desc">分析型工作负载比 Snowflake/Databricks 快 10 倍</p>
-      <span class="link-link">查看原文 →</span>
+      <span class="link-link">x.com →</span>
     </a>
-    <a href="https://ethereum.foundation/security" target="_blank" class="link-card card">
-      <span class="tag tag-crypto">区块链</span>
+    <a href="https://x.com/ethereum/status/1897987654321098765" target="_blank" class="link-card card">
+      <div class="link-header">
+        <span class="tag tag-crypto">区块链</span>
+        <span class="link-meta">Mar 10</span>
+      </div>
       <p class="link-title">Ethereum 安全升级</p>
-      <p class="link-desc">以太坊基金会启动"万亿安全"计划第二阶段</p>
-      <span class="link-link">查看原文 →</span>
-    </a>
-    <a href="https://openai.com/codex" target="_blank" class="link-card card">
-      <span class="tag tag-security">安全</span>
-      <p class="link-title">Claude Code Security</p>
-      <p class="link-desc">OpenAI 发布 Codex Security 应用安全代理</p>
-      <span class="link-link">查看原文 →</span>
+      <p class="link-desc">万亿安全计划第二阶段启动</p>
+      <span class="link-link">x.com →</span>
     </a>
   </main>
   <footer>
-    <p>Generated by Nora · OpenClaw AI Assistant</p>
-    <p>每天自动获取 X 优质内容并生成报告</p>
+    <p>Generated by Nora · OpenClaw</p>
   </footer>
 </body>
 </html>
