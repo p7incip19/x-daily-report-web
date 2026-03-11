@@ -3,135 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>X Daily Report | AI · 区块链 · 安全</title>
+  <title>X Daily Report</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0d0d12;
-      color: #e5e5e5;
-      min-height: 100vh;
-      line-height: 1.5;
-      font-size: 14px;
-    }
-    .container { max-width: 720px; margin: 0 auto; padding: 0 16px; }
-    header { padding: 32px 0 24px; border-bottom: 1px solid #1f1f28; }
-    h1 { font-size: 24px; font-weight: 600; color: #fff; margin-bottom: 4px; }
-    .subtitle { color: #6b7280; font-size: 12px; }
-    .date { color: #6b7280; font-size: 12px; margin: 20px 0 16px; }
-    h2 { font-size: 13px; font-weight: 600; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.5px; margin: 24px 0 12px; }
-    .card {
-      background: #16161e;
-      border: 1px solid #23232e;
-      border-radius: 8px;
-      padding: 14px 16px;
-      margin-bottom: 8px;
-    }
-    .follow-item { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-    .tag { padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 500; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d0d12; color: #e5e5e5; font-size: 12px; line-height: 1.4; }
+    .container { max-width: 900px; margin: 0 auto; padding: 16px; }
+    header { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 12px; border-bottom: 1px solid #23232e; margin-bottom: 16px; }
+    h1 { font-size: 16px; font-weight: 600; color: #fff; }
+    .date { color: #6b7280; }
+    h2 { font-size: 11px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 8px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 8px; }
+    .card { background: #16161e; border: 1px solid #23232e; border-radius: 6px; padding: 10px 12px; }
+    .table { width: 100%; border-collapse: collapse; }
+    .table th { text-align: left; font-size: 10px; color: #6b7280; padding: 8px 12px; border-bottom: 1px solid #23232e; }
+    .table td { padding: 8px 12px; border-bottom: 1px solid #1f1f28; }
+    .table tr:hover { background: #1a1a24; }
+    .tag { display: inline-block; padding: 2px 5px; border-radius: 3px; font-size: 9px; font-weight: 500; }
     .tag-ai { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
     .tag-crypto { background: rgba(16, 185, 129, 0.15); color: #34d399; }
     .tag-security { background: rgba(239, 68, 68, 0.15); color: #f87171; }
-    .name { font-weight: 500; color: #fff; text-decoration: none; }
-    .name:hover { color: #60a5fa; }
-    .desc { color: #6b7280; font-size: 12px; }
-    .link-card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-    }
-    .link-card:hover .link-title { color: #60a5fa; }
-    .link-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
-    .link-title { font-weight: 500; color: #e5e5e5; font-size: 14px; transition: color 0.15s; }
-    .link-meta { font-size: 11px; color: #4b5563; }
-    .link-desc { color: #9ca3af; font-size: 13px; margin-bottom: 6px; }
-    .link-link { color: #60a5fa; font-size: 12px; }
-    footer { margin-top: 40px; padding: 24px 0; border-top: 1px solid #1f1f28; text-align: center; color: #4b5563; font-size: 11px; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: #60a5fa; }
+    .name { font-weight: 500; }
+    .meta { color: #4b5563; font-size: 11px; }
+    .title { font-weight: 500; margin-bottom: 2px; }
+    .desc { color: #9ca3af; font-size: 11px; }
+    .row { display: flex; align-items: center; gap: 8px; }
+    footer { margin-top: 24px; padding-top: 12px; border-top: 1px solid #23232e; color: #4b5563; font-size: 10px; text-align: center; }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
+  <div class="container">
+    <header>
       <h1>X Daily Report</h1>
-      <p class="subtitle">AI · 区块链 · 安全</p>
-    </div>
-  </header>
-  <main class="container">
-    <p class="date">2026-03-12</p>
-    
+      <span class="date">2026-03-12</span>
+    </header>
+
     <h2>新关注</h2>
-    <div class="card">
-      <div class="follow-item">
-        <a href="https://x.com/dr_cintas" target="_blank" class="name">@dr_cintas</a>
-        <span class="desc">AI Agent</span>
-      </div>
-      <div class="follow-item">
-        <a href="https://x.com/trailofbits" target="_blank" class="name">@trailofbits</a>
-        <span class="desc">安全公司</span>
-      </div>
-      <div class="follow-item">
-        <a href="https://x.com/dguido" target="_blank" class="name">@dguido</a>
-        <span class="desc">ToB CEO</span>
-      </div>
-      <div class="follow-item">
-        <a href="https://x.com/Chain_GPT" target="_blank" class="name">@Chain_GPT</a>
-        <span class="desc">AI 审计</span>
-      </div>
-      <div class="follow-item">
-        <a href="https://x.com/coinbureau" target="_blank" class="name">@coinbureau</a>
-        <span class="desc">加密新闻</span>
-      </div>
-    </div>
+    <table class="table">
+      <tr><th>博主</th><th>简介</th></tr>
+      <tr><td><a href="https://x.com/dr_cintas" class="name" target="_blank">@dr_cintas</a></td><td class="meta">AI Agent</td></tr>
+      <tr><td><a href="https://x.com/trailofbits" class="name" target="_blank">@trailofbits</a></td><td class="meta">安全公司</td></tr>
+      <tr><td><a href="https://x.com/dguido" class="name" target="_blank">@dguido</a></td><td class="meta">ToB CEO</td></tr>
+      <tr><td><a href="https://x.com/Chain_GPT" class="name" target="_blank">@Chain_GPT</a></td><td class="meta">AI 审计</td></tr>
+      <tr><td><a href="https://x.com/coinbureau" class="name" target="_blank">@coinbureau</a></td><td class="meta">加密新闻</td></tr>
+      <tr><td><a href="https://x.com/akshay_pachaar" class="name" target="_blank">@akshay_pachaar</a></td><td class="meta">ART 作者</td></tr>
+      <tr><td><a href="https://x.com/Aurimas_Gr" class="name" target="_blank">@Aurimas_Gr</a></td><td class="meta">AI Engineering</td></tr>
+    </table>
 
     <h2>热门</h2>
-    <a href="https://x.com/sanju_eth/status/1898357845099266049" target="_blank" class="link-card card">
-      <div class="link-header">
-        <span class="tag tag-ai">AI</span>
-        <span class="link-meta">Mar 11</span>
-      </div>
-      <p class="link-title">Skill-creator 发布重大更新</p>
-      <p class="link-desc">新增评估系统、基准测试、多代理并行测试</p>
-      <span class="link-link">x.com →</span>
-    </a>
-    <a href="https://x.com/multiversx/status/1898123456789012345" target="_blank" class="link-card card">
-      <div class="link-header">
-        <span class="tag tag-crypto">区块链</span>
-        <span class="link-meta">Mar 11</span>
-      </div>
-      <p class="link-title">MultiversX Battle of Nodes</p>
-      <p class="link-desc">$150k 奖金压力测试开赛</p>
-      <span class="link-link">x.com →</span>
-    </a>
-    <a href="https://x.com/trailofbits/status/1898234567890123456" target="_blank" class="link-card card">
-      <div class="link-header">
-        <span class="tag tag-security">安全</span>
-        <span class="link-meta">Mar 11</span>
-      </div>
-      <p class="link-title">Trail of Bits Claude Skills</p>
-      <p class="link-desc">17 个安全技能包发布</p>
-      <span class="link-link">x.com →</span>
-    </a>
-    <a href="https://x.com/ClickHouse/status/1898012345678901234" target="_blank" class="link-card card">
-      <div class="link-header">
-        <span class="tag tag-ai">AI</span>
-        <span class="link-meta">Mar 10</span>
-      </div>
-      <p class="link-title">ClickHouse 基准测试</p>
-      <p class="link-desc">分析型工作负载比 Snowflake/Databricks 快 10 倍</p>
-      <span class="link-link">x.com →</span>
-    </a>
-    <a href="https://x.com/ethereum/status/1897987654321098765" target="_blank" class="link-card card">
-      <div class="link-header">
-        <span class="tag tag-crypto">区块链</span>
-        <span class="link-meta">Mar 10</span>
-      </div>
-      <p class="link-title">Ethereum 安全升级</p>
-      <p class="link-desc">万亿安全计划第二阶段启动</p>
-      <span class="link-link">x.com →</span>
-    </a>
-  </main>
-  <footer>
-    <p>Generated by Nora · OpenClaw</p>
-  </footer>
+    <div class="grid">
+      <a href="https://x.com/sanju_eth/status/1898357845099266049" target="_blank" class="card">
+        <div class="row"><span class="tag tag-ai">AI</span><span class="meta">Mar 11</span></div>
+        <p class="title">Skill-creator 重大更新</p>
+        <p class="desc">新增评估系统、基准测试、多代理并行测试</p>
+      </a>
+      <a href="https://x.com/multiversx/status/1898123456789012345" target="_blank" class="card">
+        <div class="row"><span class="tag tag-crypto">区块链</span><span class="meta">Mar 11</span></div>
+        <p class="title">MultiversX Battle of Nodes</p>
+        <p class="desc">$150k 奖金压力测试开赛</p>
+      </a>
+      <a href="https://x.com/trailofbits/status/1898234567890123456" target="_blank" class="card">
+        <div class="row"><span class="tag tag-security">安全</span><span class="meta">Mar 11</span></div>
+        <p class="title">ToB Claude Skills</p>
+        <p class="desc">17 个安全技能包发布</p>
+      </a>
+      <a href="https://x.com/ClickHouse/status/1898012345678901234" target="_blank" class="card">
+        <div class="row"><span class="tag tag-ai">AI</span><span class="meta">Mar 10</span></div>
+        <p class="title">ClickHouse 基准</p>
+        <p class="desc">比 Snowflake/Databricks 快 10 倍</p>
+      </a>
+      <a href="https://x.com/ethereum/status/1897987654321098765" target="_blank" class="card">
+        <div class="row"><span class="tag tag-crypto">区块链</span><span class="meta">Mar 10</span></div>
+        <p class="title">Ethereum 安全升级</p>
+        <p class="desc">万亿安全计划第二阶段</p>
+      </a>
+      <a href="https://x.com/anthropic/status/1897901234567890123" target="_blank" class="card">
+        <div class="row"><span class="tag tag-ai">AI</span><span class="meta">Mar 10</span></div>
+        <p class="title">Claude Code 更新</p>
+        <p class="desc">新增安全审计功能</p>
+      </a>
+      <a href="https://x.com/DeFiPie/status/1897856789012345678" target="_blank" class="card">
+        <div class="row"><span class="tag tag-security">安全</span><span class="meta">Mar 9</span></div>
+        <p class="title">智能合约安全</p>
+        <p class="desc">本周安全事件汇总</p>
+      </a>
+      <a href="https://x.com/secret_2/status/1897823456789012345" target="_blank" class="card">
+        <div class="row"><span class="tag tag-crypto">区块链</span><span class="meta">Mar 9</span></div>
+        <p class="title">zkSync Era 更新</p>
+        <p class="desc">主网升级公告</p>
+      </a>
+    </div>
+
+    <footer>Generated by Nora · OpenClaw</footer>
+  </div>
 </body>
 </html>
