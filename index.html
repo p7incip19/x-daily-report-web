@@ -23,6 +23,13 @@
     th { text-align: left; font-size: 9px; color: #4b5563; padding: 4px 8px; border-bottom: 1px solid #23232e; }
     td { padding: 5px 8px; border-bottom: 1px solid #1a1a22; font-size: 11px; }
     tr:hover { background: #141418; }
+    .group { margin-bottom: 12px; }
+    .group-header { display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: #1a1a24; border-radius: 4px; cursor: pointer; }
+    .group-title { font-weight: 500; color: #e5e7eb; }
+    .group-count { color: #6b7280; font-size: 10px; }
+    .group-items { margin-top: 6px; }
+    .group-item { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-bottom: 1px solid #1a1a22; }
+    .group-item:last-child { border-bottom: none; }
     .tag { display: inline-block; padding: 1px 4px; border-radius: 2px; font-size: 8px; font-weight: 500; }
     .tag-ai { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
     .tag-crypto { background: rgba(16, 185, 129, 0.2); color: #34d399; }
@@ -31,6 +38,8 @@
     a:hover { color: #60a5fa; }
     .title { color: #e5e7eb; }
     .meta { color: #6b7280; font-size: 10px; }
+    .expand-btn { color: #60a5fa; font-size: 10px; cursor: pointer; }
+    .hidden { display: none; }
     footer { margin-top: 16px; padding-top: 8px; border-top: 1px solid #23232e; color: #4b5563; font-size: 9px; text-align: center; }
   </style>
 </head>
@@ -57,15 +66,59 @@
     </div>
 
     <h2>热门</h2>
-    <table>
-      <tr><th style="width:60px">分类</th><th style="width:50px">时间</th><th>内容</th></tr>
-      <tr><td><span class="tag tag-ai">AI</span></td><td class="meta">Mar 9</td><td><a href="https://x.com/databricks/status/2031028513151607212" class="title" target="_blank">Databricks Agent Bricks - 部署 AI Agent</a></td></tr>
-      <tr><td><span class="tag tag-ai">AI</span></td><td class="meta">Mar 5</td><td><a href="https://x.com/akshay_pachaar/status/2029503405832716669" class="title" target="_blank">ART - 开源 Agent 训练框架</a></td></tr>
-      <tr><td><span class="tag tag-ai">AI</span></td><td class="meta">Mar 3</td><td><a href="https://x.com/recap_david/status/2028833670036115656" class="title" target="_blank">AI 生成房产视频 - 成本 $10</a></td></tr>
-      <tr><td><span class="tag tag-security">安全</span></td><td class="meta">Feb 24</td><td><a href="https://x.com/_vmlops/status/2026264152797503847" class="title" target="_blank">Claude Skills 33 页官方指南</a></td></tr>
-    </table>
+    <!-- AI Agent 产品 -->
+    <div class="group">
+      <div class="group-header" onclick="toggleGroup(this)">
+        <span class="group-title">AI Agent 产品</span>
+        <span class="group-count">3 条 | 展开</span>
+      </div>
+      <div class="group-items hidden">
+        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/charliejhills/status/2031768321759309831" class="title" target="_blank">Replit Agent 4 - 人机协作新模式</a><span class="meta">Mar 11</span></div>
+        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/databricks/status/2031028513151607212" class="title" target="_blank">Databricks Agent Bricks - 部署 AI Agent</a><span class="meta">Mar 9</span></div>
+        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/binance/status/2028833181143847221" class="title" target="_blank">Binance AI Agent Skills 上线</a><span class="meta">Mar 3</span></div>
+      </div>
+    </div>
+
+    <!-- AI 开发框架 -->
+    <div class="group">
+      <div class="group-header" onclick="toggleGroup(this)">
+        <span class="group-title">AI 开发框架</span>
+        <span class="group-count">3 条 | 展开</span>
+      </div>
+      <div class="group-items hidden">
+        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/akshay_pachaar/status/2029503405832716669" class="title" target="_blank">ART - 开源 Agent 训练框架 (GRPO+RULER)</a><span class="meta">Mar 5</span></div>
+        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/AlexFinn/status/2021387755222335901" class="title" target="_blank">OpenClaw 本地运行 - 24/7 无需 token</a><span class="meta">Feb 11</span></div>
+        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/dr_cintas/status/2026725771738268135" class="title" target="_blank">Claude Code Skills Store - 25万+ skills</a><span class="meta">Feb 25</span></div>
+      </div>
+    </div>
+
+    <!-- AI 应用案例 -->
+    <div class="group">
+      <div class="group-header" onclick="toggleGroup(this)">
+        <span class="group-title">AI 应用案例</span>
+        <span class="group-count">3 条 | 展开</span>
+      </div>
+      <div class="group-items hidden">
+        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/EHuanglu/status/2029914730966515812" class="title" target="_blank">AI 生成建筑图纸 - 准确尺寸+渲染</a><span class="meta">Mar 6</span></div>
+        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/recap_david/status/2028833670036115656" class="title" target="_blank">AI 生成房产视频 - 成本 $10</a><span class="meta">Mar 3</span></div>
+        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/tec_marco10/status/2031427845747261793" class="title" target="_blank">n8n+Claude Agent 实战 3 个 prompt</a><span class="meta">Mar 10</span></div>
+      </div>
+    </div>
 
     <footer>Generated by Nora · OpenClaw</footer>
   </div>
+  <script>
+    function toggleGroup(header) {
+      const items = header.nextElementSibling;
+      const count = header.querySelector('.group-count');
+      if (items.classList.contains('hidden')) {
+        items.classList.remove('hidden');
+        count.textContent = count.textContent.replace('展开', '收起');
+      } else {
+        items.classList.add('hidden');
+        count.textContent = count.textContent.replace('收起', '展开');
+      }
+    }
+  </script>
 </body>
 </html>
