@@ -34,11 +34,11 @@
     .tag-ai { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
     .tag-crypto { background: rgba(16, 185, 129, 0.2); color: #34d399; }
     .tag-security { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+    .tag-thought { background: rgba(168, 85, 247, 0.2); color: #a855f7; }
     a { color: inherit; text-decoration: none; }
     a:hover { color: #60a5fa; }
     .title { color: #e5e7eb; }
     .meta { color: #6b7280; font-size: 10px; }
-    .expand-btn { color: #60a5fa; font-size: 10px; cursor: pointer; }
     .hidden { display: none; }
     footer { margin-top: 16px; padding-top: 8px; border-top: 1px solid #23232e; color: #4b5563; font-size: 9px; text-align: center; }
   </style>
@@ -46,13 +46,13 @@
 <body>
   <div class="container">
     <header>
-      <h1>Replit Agent 4 发布，Binance 开放 AI Agent 商店</h1>
+      <h1>Anthropic 成立研究院，Elon Musk 展示 Grok Imagine</h1>
       <span class="date">2026-03-12</span>
     </header>
 
     <h2>新关注</h2>
     <div class="stats">
-      <span class="stat">今日新增: <span class="stat-num">7</span></span>
+      <span class="stat">今日新增: <span class="stat-num">0</span></span>
       <span class="stat">总关注: <span class="stat-num">16</span></span>
     </div>
     <div class="cards">
@@ -66,46 +66,45 @@
     </div>
 
     <h2>热门</h2>
-    <!-- AI Agent 产品 -->
+    <!-- AI 热点 -->
     <div class="group">
       <div class="group-header" onclick="toggleGroup(this)">
-        <span class="group-title">AI Agent 产品</span>
-        <span class="group-count">3 条 | 展开</span>
+        <span class="group-title">AI 热点</span>
+        <span class="group-count">4 条 | 展开</span>
       </div>
       <div class="group-items hidden">
-        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/charliejhills/status/2031768321759309831" class="title" target="_blank">Replit Agent 4 - 人机协作新模式</a><span class="meta">Mar 11</span></div>
-        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/databricks/status/2031028513151607212" class="title" target="_blank">Databricks Agent Bricks - 部署 AI Agent</a><span class="meta">Mar 9</span></div>
-        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/binance/status/2028833181143847221" class="title" target="_blank">Binance AI Agent Skills 上线</a><span class="meta">Mar 3</span></div>
+        <div class="group-item"><span class="tag tag-ai">AI</span><span class="meta">Mar 11</span><a href="https://x.com/elonmusk/status/2031742857007272243" class="title" target="_blank">Elon Musk 展示 Grok Imagine 生成水塘视频 - 3000万+浏览</a></div>
+        <div class="group-item"><span class="tag tag-ai">AI</span><span class="meta">Mar 11</span><a href="https://x.com/AnthropicAI/status/2031674087374815577" class="title" target="_blank">Anthropic 宣布成立 The Anthropic Institute - 推进 AI 公共对话</a></div>
+        <div class="group-item"><span class="tag tag-ai">AI</span><span class="meta">Mar 11</span><a href="https://x.com/AI4S_Catalyst/status/2031528955472392301" class="title" target="_blank">Stanford-Princeton 团队开源 LabClaw - AI Co-Scientist</a></div>
+        <div class="group-item"><span class="tag tag-ai">AI</span><span class="meta">Mar 10</span><a href="https://x.com/dr_cintas/status/2031368336588550630" class="title" target="_blank">Lovart 发布 - Nano Banana 2 AI 精准修图工具</a></div>
       </div>
     </div>
 
-    <!-- AI 开发框架 -->
+    <!-- 区块链 -->
     <div class="group">
       <div class="group-header" onclick="toggleGroup(this)">
-        <span class="group-title">AI 开发框架</span>
-        <span class="group-count">3 条 | 展开</span>
+        <span class="group-title">区块链</span>
+        <span class="group-count">2 条 | 展开</span>
       </div>
       <div class="group-items hidden">
-        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/akshay_pachaar/status/2029503405832716669" class="title" target="_blank">ART - 开源 Agent 训练框架 (GRPO+RULER)</a><span class="meta">Mar 5</span></div>
-        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/AlexFinn/status/2021387755222335901" class="title" target="_blank">OpenClaw 本地运行 - 24/7 无需 token</a><span class="meta">Feb 11</span></div>
-        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/dr_cintas/status/2026725771738268135" class="title" target="_blank">Claude Code Skills Store - 25万+ skills</a><span class="meta">Feb 25</span></div>
+        <div class="group-item"><span class="tag tag-crypto">区块链</span><span class="meta">Mar 11</span><a href="https://x.com/Altcoinbuzzio/status/2031652677319344454" class="title" target="_blank">BTC 交易心理：何时该恐慌性抛售</a></div>
+        <div class="group-item"><span class="tag tag-crypto">区块链</span><span class="meta">Mar 11</span><a href="https://x.com/coinbureau/status/2031653490796408943" class="title" target="_blank">组合管理中损失收割的重要性</a></div>
       </div>
     </div>
 
-    <!-- AI 应用案例 -->
+    <!-- 观点/讨论 -->
     <div class="group">
       <div class="group-header" onclick="toggleGroup(this)">
-        <span class="group-title">AI 应用案例</span>
-        <span class="group-count">3 条 | 展开</span>
+        <span class="group-title">观点/讨论</span>
+        <span class="group-count">2 条 | 展开</span>
       </div>
       <div class="group-items hidden">
-        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/EHuanglu/status/2029914730966515812" class="title" target="_blank">AI 生成建筑图纸 - 准确尺寸+渲染</a><span class="meta">Mar 6</span></div>
-        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/recap_david/status/2028833670036115656" class="title" target="_blank">AI 生成房产视频 - 成本 $10</a><span class="meta">Mar 3</span></div>
-        <div class="group-item"><span class="tag tag-ai">AI</span><a href="https://x.com/tec_marco10/status/2031427845747261793" class="title" target="_blank">n8n+Claude Agent 实战 3 个 prompt</a><span class="meta">Mar 10</span></div>
+        <div class="group-item"><span class="tag tag-thought">观点</span><span class="meta">Mar 11</span><a href="https://x.com/PandaTalk8/status/2031606310496514457" class="title" target="_blank">PandaTalk 宣布屏蔽 AI 账号 - 追求真实互动</a></div>
+        <div class="group-item"><span class="tag tag-thought">观点</span><span class="meta">Mar 11</span><a href="https://x.com/oragnes/status/2031821025063944215" class="title" target="_blank">江学勤教授演讲 - 穷人越自律被收割越惨</a></div>
       </div>
     </div>
 
-    <footer>Generated by Nora · OpenClaw</footer>
+    <footer>Generated by Nora · OpenClaw · Updated 2026-03-12 11:10</footer>
   </div>
   <script>
     function toggleGroup(header) {
